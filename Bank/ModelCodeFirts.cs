@@ -17,7 +17,19 @@ namespace Bank
         {
         }
 
-        public DbSet<Phone> Phones { get; set; }
+        public DbSet<Role> Roles { get; set; }
+        public DbSet<Users> Users { get; set; }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
+            modelBuilder.Entity<Users>()
+                .HasRequired(u => u.Role) // задаем связь один-ко-многим
+                .WithMany(r => r.Users) // задаем, что у одной роли может быть много пользователей
+                .HasForeignKey(u => u.RoleId); // задаем внешний ключ на таблицу Role
+        }
+
         // Add a DbSet for each entity type that you want to include in your model. For more information 
         // on configuring and using a Code First model, see http://go.microsoft.com/fwlink/?LinkId=390109.
 

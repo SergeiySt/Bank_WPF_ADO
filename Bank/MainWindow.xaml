@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Bank"
         mc:Ignorable="d"
-        Title="Банк" Height="450" Width="800" Closing="Window_Closing">
+        Title="Банк" Height="327" Width="642" Closing="Window_Closing" Icon="/42492bank_99001.ico" WindowStartupLocation="CenterScreen">
     <Window.Resources>
         <Style TargetType="Button">
             <Setter Property="Margin" Value="20 8 20 8" />
@@ -13,7 +13,7 @@
             <Setter Property="Height" Value="30" />
         </Style>
     </Window.Resources>
-    <Grid>
+    <Grid Margin="0,0,0,70" >
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="101*"/>
             <ColumnDefinition Width="265*"/>
@@ -23,17 +23,19 @@
             <RowDefinition Height="*" />
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
-        <DataGrid AutoGenerateColumns="False" x:Name="phonesGrid" Grid.ColumnSpan="3" Height="NaN" Margin="0,0,0,51">
+        <DataGrid AutoGenerateColumns="False" x:Name="usersGrid" Grid.ColumnSpan="3" Height="NaN" Margin="0,0,0,10" Grid.RowSpan="2" Cursor="Hand">
             <DataGrid.Columns>
-                <DataGridTextColumn Binding="{Binding Title}" Header="Модель" Width="100"/>
-                <DataGridTextColumn Binding="{Binding Company}" Header="Производитель" Width="110"/>
-                <DataGridTextColumn Binding="{Binding Price}" Header="Цена" Width="70"/>
+                <DataGridTextColumn Binding="{Binding Id}" Header="ID" Width="50"/>
+                <DataGridTextColumn Binding="{Binding Role.RoleName}" Header="Роль" Width="140"/>
+                <DataGridTextColumn Binding="{Binding Number}" Header="Рахунок" Width="100"/>
+                <DataGridTextColumn Binding="{Binding Amount}" Header="Кількість коштів" Width="110"/>
+                <DataGridTextColumn Binding="{Binding PIB}" Header="ПІБ" Width="200"/>
             </DataGrid.Columns>
         </DataGrid>
 
-        <StackPanel HorizontalAlignment="Left" Orientation="Horizontal" Grid.Column="1" Margin="58,388,0,0">
-            <Button x:Name="updateButton" Content="Обновить" Click="updateButton_Click" />
-            <Button x:Name="deleteButton" Content="Удалить" Click="deleteButton_Click" />
+        <StackPanel HorizontalAlignment="Left" Orientation="Horizontal" Margin="10,35,0,-58" RenderTransformOrigin="0.521,-1.101" Grid.Row="1" Grid.Column="1" >
+            <Button x:Name="updateButton" Content="Оновити" Click="updateButton_Click" Cursor="Hand" />
+            <Button x:Name="deleteButton" Content="Видалити" Click="deleteButton_Click" Cursor="Hand" />
         </StackPanel>
     </Grid>
 </Window>
