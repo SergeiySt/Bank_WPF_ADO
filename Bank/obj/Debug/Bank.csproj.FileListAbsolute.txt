@@ -19,3 +19,4 @@ D:\ДЗ_Шаг\Windows Forms C#\GitHub\Bank_WPF_ADO\Bank\obj\Debug\Bank.csproj.C
 D:\ДЗ_Шаг\Windows Forms C#\GitHub\Bank_WPF_ADO\Bank\obj\Debug\Bank.csproj.CopyComplete
 D:\ДЗ_Шаг\Windows Forms C#\GitHub\Bank_WPF_ADO\Bank\obj\Debug\Bank.exe
 D:\ДЗ_Шаг\Windows Forms C#\GitHub\Bank_WPF_ADO\Bank\obj\Debug\Bank.pdb
+D:\ДЗ_Шаг\Windows Forms C#\GitHub\Bank_WPF_ADO\Bank\obj\Debug\Bank.Migrations.InitialCreate.resources
